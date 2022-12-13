@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../Assets/logo.svg';
+import logo from '../../Assets/logo.svg';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TiThMenu, TiTimes } from 'react-icons/ti';
 import styled from 'styled-components';
