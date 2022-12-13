@@ -14,13 +14,13 @@
 }
 .nav__logo img {
 	margin-left: 16px;
-	width: 80px;
-	height: 80px;
+	width: 54px;
+	height: 54px;
 }
 .nav__logo h1 {
 	color: var(--clr-primary);
 	font-family: 'Bree Serif', serif;
-	font-size: 40px;
+	font-size: 24px;
 	font-weight: 400;
 	margin-bottom: -15px;
 }
@@ -70,6 +70,15 @@
 @media (min-width: 1200px) {
 	.container {
 		padding: 20px 120px;
+	}
+	.nav__logo img {
+		margin-left: 16px;
+		width: 80px;
+		height: 80px;
+	}
+	.nav__logo h1 {
+		font-size: 40px;
+		margin-bottom: -15px;
 	}
 	.nav__lists {
 		display: flex;
