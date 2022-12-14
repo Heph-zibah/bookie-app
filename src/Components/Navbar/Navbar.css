@@ -13,7 +13,7 @@
 	align-items: center;
 }
 .nav__logo img {
-	margin-left: 16px;
+	margin-right: 16px;
 	width: 54px;
 	height: 54px;
 }
@@ -72,7 +72,6 @@
 		padding: 20px 120px;
 	}
 	.nav__logo img {
-		margin-left: 16px;
 		width: 80px;
 		height: 80px;
 	}
