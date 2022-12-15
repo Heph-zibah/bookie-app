@@ -28,6 +28,13 @@
 	margin: 16px 0;
 	font-size: 17px;
 }
+.services__info > div {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 @media screen and (min-width: 1200px) {
 	.wrapper {
 		padding: 61px 120px;
@@ -48,5 +55,10 @@
 	.services__info p {
 		margin: 16px 0;
 		font-size: 40px;
+	}
+	.services__info > div {
+		margin-top: 0;
+		align-items: start;
+		justify-content: start;
 	}
 }
