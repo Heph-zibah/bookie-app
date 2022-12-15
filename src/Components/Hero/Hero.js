@@ -13,7 +13,9 @@ const Hero = () => {
 					<div className='header__content'>
 						<h1>Save Money and Buy Books for Your Kids </h1>
 						<p>Let us help you out. Save and Buy Books our website </p>
-						<button>Get Started</button>
+						<div>
+							<button>Get Started</button>
+						</div>
 					</div>
 				</div>
 			</header>
