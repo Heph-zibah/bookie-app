@@ -16,9 +16,11 @@ const Services = () => {
 						<div className='services__info'>
 							<h2>Save Money </h2>
 							<p>You can have a saving wallets with Bookie</p>
-							<button>
-								Learn More <MdKeyboardArrowRight />
-							</button>
+							<div>
+								<button>
+									Learn More <MdKeyboardArrowRight />
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
