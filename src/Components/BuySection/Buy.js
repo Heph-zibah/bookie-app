@@ -14,9 +14,11 @@ const Buy = () => {
 					<div className='buy__content'>
 						<h1>Buy Books</h1>
 						<p>You can buy books on Bookie and have an easy access </p>
-						<button>
-							Learn More <MdKeyboardArrowRight />
-						</button>
+						<div>
+							<button>
+								Learn More <MdKeyboardArrowRight />
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>
