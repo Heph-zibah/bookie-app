@@ -5,6 +5,7 @@ import Buy from './Components/BuySection/Buy';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Footer from './Components/Footer/Footer';
 import Newsletter from './Components/Newsletter/Newsletter';
+import Books from './Components/Books/Books';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<Hero />
 			<Services />
 			<Buy />
+			<Books />
 			<Testimonials />
 			<Newsletter />
 			<Footer />
