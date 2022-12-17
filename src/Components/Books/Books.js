@@ -1,7 +1,6 @@
 import React from 'react';
-import { AiFillStar } from 'react-icons/ai';
-import booksImg from '../../Assets/books-img.svg';
 import './Books.css';
+import bookItems from './BooksData';
 
 const Books = () => {
 	return (
@@ -18,25 +17,30 @@ const Books = () => {
 							<p>Senior-Secondary</p>
 						</div>
 						<div className='books__cards'>
-							<div className='books__card'>
-								<img src={booksImg} alt='a chemistry book' />
-								<div className='books__info'>
-									<div className='books__div'>
-										<p className='books__name'>Advanced Chemistry</p>
-										<p>Senior -Secondary</p>
-										<div className='books__rating'>
-											<AiFillStar className='books__rate' />
-											<AiFillStar className='books__rate' />
-											<AiFillStar className='books__rate' />
-											<AiFillStar className='books__rate' />
-											<AiFillStar className='books__rate' />
+							{bookItems.map((bookItem) => {
+								const { id, image, desc, category, rate, price } = bookItem;
+								return (
+									<div key={id} className='books__card'>
+										<img src={image} alt={desc} />
+										<div className='books__info'>
+											<div className='books__div'>
+												<p className='books__name'>{category}</p>
+												<p>Senior -Secondary</p>
+												<div className='books__rating'>
+													<i className='books__rate'>{rate}</i>
+													<i className='books__rate'>{rate}</i>
+													<i className='books__rate'>{rate}</i>
+													<i className='books__rate'>{rate}</i>
+													<i className='books__rate'>{rate}</i>
+												</div>
+											</div>
+											<div className='books__price'>
+												<p>NGN{price}</p>
+											</div>
 										</div>
 									</div>
-									<div className='books__price'>
-										<p>NGN3,500</p>
-									</div>
-								</div>
-							</div>
+								);
+							})}
 						</div>
 					</div>
 				</div>
