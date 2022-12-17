@@ -32,6 +32,7 @@ button {
 	transition: 0.5s;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 }
 button:hover {
@@ -39,4 +40,14 @@ button:hover {
 	color: var(--clr-primary);
 	border: 1px solid var(--clr-primary);
 	font-weight: 700;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	transition: 1s;
+}
+a:hover {
+	text-decoration: underline;
+	font-weight: 500;
+	color: var(--clr-primary);
 }
