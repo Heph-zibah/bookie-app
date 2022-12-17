@@ -66,6 +66,7 @@
 .mobile__nav ul li:hover {
 	background: var(--clr-primary);
 	color: #fff;
+	cursor: pointer;
 }
 @media (min-width: 1200px) {
 	.container {
@@ -89,6 +90,11 @@
 		align-items: center;
 		font-size: 18px;
 		color: var(--clr-text-primary);
+		cursor: pointer;
+	}
+	.nav__lists li:hover {
+		color: var(--clr-primary);
+		border-bottom: 3px solid var(--clr-primary);
 	}
 	.nav__btns {
 		display: flex;
