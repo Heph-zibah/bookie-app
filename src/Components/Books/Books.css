@@ -23,10 +23,16 @@
 	padding: 16px 39px;
 	border: 1px solid var(--clr-primary);
 	border-radius: 10px;
+	cursor: pointer;
 }
 .books__links p.active {
 	background-color: var(--clr-primary);
 	color: #fff;
+}
+.books__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	gap: 64px 20px;
 }
 .books__card {
 	width: 373px;
@@ -35,6 +41,13 @@
 	background-color: #fff;
 	padding: 2px 3px;
 	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+.books__card:hover {
+	box-shadow: 8px, 8px rgba(0, 0, 0, 0.8);
+	background-color: #fff;
+	scale: 1.1;
 }
 .books__info {
 	display: flex;
