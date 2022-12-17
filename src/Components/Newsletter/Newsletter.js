@@ -3,6 +3,9 @@ import newsImg from '../../Assets/new-img.svg';
 import './Newsletter.css';
 
 const Newsletter = () => {
+	const handleSubmit = (e) => {
+		e.preventdefault();
+	};
 	return (
 		<>
 			<section className='news__container'>
@@ -14,11 +17,11 @@ const Newsletter = () => {
 						<h1>
 							New to <span> Bookie</span>
 						</h1>
-						<p>Subscribe to our newletter to get updates on our latest offers. </p>
-						<form className='news__form'>
+						<p>Subscribe to our newsletter to get updates on our latest offers. </p>
+						<form className='news__form' onSubmit={handleSubmit}>
 							<input type='text' placeholder='Enter Email' />
 							<div>
-								<button>Subscribe</button>
+								<button type='button'>Subscribe</button>
 							</div>
 						</form>
 					</div>
