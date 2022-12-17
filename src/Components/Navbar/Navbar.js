@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../Assets/logo.svg';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TiThMenu, TiTimes } from 'react-icons/ti';
+import { IoIosArrowForward } from 'react-icons/io';
 import styled from 'styled-components';
 import './Navbar.css';
 
@@ -30,22 +31,22 @@ const Navbar = () => {
 					<Button>Sign Up</Button>
 				</div>
 				<div onClick={() => setNav(!nav)} className='nav__icon'>
-					{nav ? <TiThMenu /> : <TiTimes className='mobile__icon' />}
+					{!nav ? <TiThMenu /> : <TiTimes className='mobile__icon' />}
 				</div>
 			</div>
-			<div className={nav ? 'mobile__nav' : 'mobile__nav show'}>
+			<div className={!nav ? 'mobile__nav' : 'mobile__nav show'}>
 				<div onClick={() => setNav(!nav)} className='mobile__icon'>
-					{nav ? <TiThMenu className='nav__icon' /> : <TiTimes />}
+					{!nav ? <TiThMenu className='nav__icon' /> : <TiTimes />}
 				</div>
 				<ul>
 					<li>Home</li>
 					<li>About</li>
 					<li>
-						Services <MdKeyboardArrowDown />
+						Services <IoIosArrowForward className='list__icon' />
 					</li>
 					<li>
 						More
-						<MdKeyboardArrowDown />
+						<IoIosArrowForward className='list__icon' />
 					</li>
 				</ul>
 			</div>
