@@ -5,6 +5,7 @@ import { TiThMenu, TiTimes } from 'react-icons/ti';
 import { IoIosArrowForward } from 'react-icons/io';
 import styled from 'styled-components';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
@@ -27,8 +28,12 @@ const Navbar = () => {
 					</li>
 				</ul>
 				<div className='nav__btns'>
-					<Button primary>Log In</Button>
-					<Button>Sign Up</Button>
+					<Button primary type='button'>
+						<Link to='/LogIn'>Log In</Link>
+					</Button>
+					<Button type='button'>
+						<Link to='/SignUp'>Sign Up</Link>
+					</Button>
 				</div>
 				<div onClick={() => setNav(!nav)} className='nav__icon'>
 					{!nav ? <TiThMenu /> : <TiTimes className='mobile__icon' />}
