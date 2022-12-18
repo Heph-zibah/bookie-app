@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../Assets/logo.svg';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import { TiThMenu, TiTimes } from 'react-icons/ti';
 import { IoIosArrowForward } from 'react-icons/io';
 import styled from 'styled-components';
@@ -10,6 +10,8 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const navigate = useNavigate();
+	const [dropdown, setDropdown] = useState(false);
+	const [mobDropdown, setMobDropdown] = useState(false);
 	return (
 		<nav className='container'>
 			<div className='nav__container'>
@@ -18,12 +20,12 @@ const Navbar = () => {
 					<h1> Bookie </h1>
 				</div>
 				<ul className='nav__lists'>
-					<li>Home</li>
-					<li>About</li>
-					<li>
-						Services <MdKeyboardArrowDown />
+					<li className='nav__list'>Home</li>
+					<li className='nav__list'>About</li>
+					<li className='nav__list' onClick={() => setDropdown(!dropdown)}>
+						Services {dropdown ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
 					</li>
-					<li>
+					<li className='nav__list'>
 						More
 						<MdKeyboardArrowDown />
 					</li>
@@ -57,8 +59,19 @@ const Navbar = () => {
 				<ul>
 					<li>Home</li>
 					<li>About</li>
-					<li>
-						Services <IoIosArrowForward className='list__icon' />
+					<li onClick={() => setMobDropdown(!mobDropdown)}>
+						Services
+						{mobDropdown ? (
+							<MdKeyboardArrowUp />
+						) : (
+							<IoIosArrowForward className='list__icon' />
+						)}
+						{mobDropdown && (
+							<ul className='mobile__dropdown'>
+								<li>Save Money</li>
+								<li>Buy Books</li>
+							</ul>
+						)}
 					</li>
 					<li>
 						More
@@ -66,6 +79,18 @@ const Navbar = () => {
 					</li>
 				</ul>
 			</div>
+			{dropdown && (
+				<ul className='nav__dropdown'>
+					<li>Save Money</li>
+					<li>Buy Books</li>
+				</ul>
+			)}
+			{mobDropdown && (
+				<ul className='mobile__dropdown'>
+					<li>Save Money</li>
+					<li>Buy Books</li>
+				</ul>
+			)}
 		</nav>
 	);
 };
