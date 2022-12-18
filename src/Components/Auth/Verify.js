@@ -1,18 +1,19 @@
 import React from 'react';
 import logo from '../../Assets/logo.svg';
 import { TiTimes } from 'react-icons/ti';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
 const Verify = () => {
 	const handleSubmit = (e) => {
 		e.preventdefault();
 	};
+	const navigate = useNavigate();
 	return (
 		<>
 			<section className='auth__section'>
 				<div className='auth__card'>
-					<div className='auth__icon'>
+					<div className='auth__icon' onClick={() => navigate('/')}>
 						<TiTimes />
 					</div>
 					<div className='auth__logo'>
@@ -24,8 +25,8 @@ const Verify = () => {
 						<p>Enter the Verification Code send to your Number</p>
 					</div>
 					<form onSubmit={handleSubmit} className='auth__form'>
-						<button className='auth__btn' type='button'>
-							<Link>Proceed</Link>
+						<button className='auth__btn' type='button' onClick={() => navigate('')}>
+							Proceed
 						</button>
 					</form>
 				</div>

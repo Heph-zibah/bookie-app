@@ -5,10 +5,11 @@ import { TiThMenu, TiTimes } from 'react-icons/ti';
 import { IoIosArrowForward } from 'react-icons/io';
 import styled from 'styled-components';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
+	const navigate = useNavigate();
 	return (
 		<nav className='container'>
 			<div className='nav__container'>
@@ -27,16 +28,26 @@ const Navbar = () => {
 						<MdKeyboardArrowDown />
 					</li>
 				</ul>
+
 				<div className='nav__btns'>
-					<Button primary type='button'>
-						<Link to='/LogIn'>Log In</Link>
+					<Button primary type='button' onClick={() => navigate('/LogIn')}>
+						Log In
 					</Button>
-					<Button type='button'>
-						<Link to='/SignUp'>Sign Up</Link>
+					<Button type='button' onClick={() => navigate('/SignUp')}>
+						Sign Up
 					</Button>
 				</div>
-				<div onClick={() => setNav(!nav)} className='nav__icon'>
-					{!nav ? <TiThMenu /> : <TiTimes className='mobile__icon' />}
+				<div className='mobile__header'>
+					<button
+						type='button'
+						className='mobile__header--btn'
+						onClick={() => navigate('/LogIn')}
+					>
+						Log In
+					</button>
+					<div onClick={() => setNav(!nav)} className='nav__icon'>
+						{!nav ? <TiThMenu /> : <TiTimes className='mobile__icon' />}
+					</div>
 				</div>
 			</div>
 			<div className={!nav ? 'mobile__nav' : 'mobile__nav show'}>

@@ -41,13 +41,18 @@ button:hover {
 	border: 1px solid var(--clr-primary);
 	font-weight: 700;
 }
+button a {
+	color: #fff;
+}
+button a:hover {
+	color: var(--clr-primary);
+}
 a {
 	text-decoration: none;
 	cursor: pointer;
 	transition: 1s;
 }
 a:hover {
-	text-decoration: underline;
 	font-weight: 500;
 	color: var(--clr-primary);
 }

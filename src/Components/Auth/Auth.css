@@ -69,12 +69,7 @@
 	right: 2%;
 	cursor: pointer;
 }
-.auth__btn a {
-	color: #fff;
-}
-.auth__btn a:hover {
-	color: var(--clr-primary);
-}
+
 .auth__footer {
 	margin: 16px;
 	display: flex;

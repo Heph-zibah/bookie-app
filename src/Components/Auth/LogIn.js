@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import logo from '../../Assets/logo.svg';
 import { TiEye, TiTimes } from 'react-icons/ti';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Auth.css';
 
 const LogIn = () => {
 	const handleSubmit = (e) => {
 		e.preventdefault();
 	};
-
+	const navigate = useNavigate();
 	const [showPassword, setShowPassword] = useState(false);
 	return (
 		<>
 			<section className='auth__section'>
 				<div className='auth__card'>
-					<div className='auth__icon'>
+					<div className='auth__icon' onClick={() => navigate('/')}>
 						<TiTimes />
 					</div>
 					<div className='auth__logo'>
@@ -57,8 +57,8 @@ const LogIn = () => {
 								<Link to='/ForgotPassword1'>Forgot Password?</Link>
 							</p>
 						</div>
-						<button className='auth__btn' type='button'>
-							<Link>Login</Link>
+						<button className='auth__btn' type='button' onClick={() => navigate('/')}>
+							Login
 						</button>
 					</form>
 					<div className='auth__footer'>
