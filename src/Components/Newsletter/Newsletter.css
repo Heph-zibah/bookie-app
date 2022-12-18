@@ -12,6 +12,9 @@
 	border-radius: 12px;
 	text-align: center;
 }
+.news__content .news__img img {
+	width: 100%;
+}
 .news__content h1 {
 	font-size: 32px;
 	font-family: 'Bree Serif', serif;
@@ -30,8 +33,8 @@
 .news__form input {
 	border: 1px solid var(--clr-primary);
 	border-radius: 10px;
-	padding: 16px 140px 18px 8px;
-	margin-right: 16px;
+	padding: 16px 0px 18px 8px;
+	margin: 0 16px;
 	outline: 0;
 }
 .news__form > div {
@@ -57,5 +60,12 @@
 		margin-top: 0;
 		align-items: start;
 		justify-content: center;
+	}
+	.news__form input {
+		border: 1px solid var(--clr-primary);
+		border-radius: 10px;
+		padding: 16px 140px 18px 8px;
+		margin: 0 16px 0 0;
+		outline: 0;
 	}
 }
