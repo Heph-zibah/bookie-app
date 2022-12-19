@@ -5,6 +5,7 @@ import ForgotPassword2 from './Components/Auth/ForgotPassword2';
 import LogIn from './Components/Auth/LogIn';
 import SignUp from './Components/Auth/SignUp';
 import Verify from './Components/Auth/Verify';
+import About from './Pages/About';
 import Home from './Pages/Home';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/LogIn' element={<LogIn />} />
 				<Route path='/ForgotPassword1' element={<ForgotPassword1 />} />
 				<Route path='/ForgotPassword2' element={<ForgotPassword2 />} />
+				<Route path='/About' element={<About />} />
 			</Routes>
 		</Router>
 	);
