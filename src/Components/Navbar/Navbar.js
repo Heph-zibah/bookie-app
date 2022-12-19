@@ -15,13 +15,15 @@ const Navbar = () => {
 	return (
 		<nav className='container'>
 			<div className='nav__container'>
-				<div className='nav__logo'>
+				<div className='nav__logo' onClick={() => navigate('/')}>
 					<img src={logo} alt='open book' />
 					<h1> Bookie </h1>
 				</div>
 				<ul className='nav__lists'>
 					<li className='nav__list'>Home</li>
-					<li className='nav__list'>About</li>
+					<li className='nav__list' onClick={() => navigate('/About')}>
+						About
+					</li>
 					<li className='nav__list' onClick={() => setDropdown(!dropdown)}>
 						Services {dropdown ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
 					</li>
