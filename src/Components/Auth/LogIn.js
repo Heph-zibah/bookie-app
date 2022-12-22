@@ -50,9 +50,10 @@ const LogIn = () => {
 							</div>
 						</div>
 						<div className='auth__forgot'>
-							<select name='' id=''>
-								Remember me
-							</select>
+							<div className='auth__check'>
+								<input type='checkbox' />
+								<label>Remember Me</label>
+							</div>
 							<p>
 								<Link to='/ForgotPassword1'>Forgot Password?</Link>
 							</p>

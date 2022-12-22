@@ -69,6 +69,17 @@
 	right: 2%;
 	cursor: pointer;
 }
+.auth__check {
+	display: flex;
+	align-items: center;
+}
+.auth__check input {
+	width: 24px;
+	margin-bottom: 0;
+}
+.auth__check label {
+	margin-top: 10px;
+}
 
 .auth__footer {
 	margin: 16px;
